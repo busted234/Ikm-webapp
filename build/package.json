@@ -1,0 +1,48 @@
+{
+  "name": "ikm",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "/home/site/wwwroot/node_modules/next/dist/bin/next start -p 8080",
+    "start-local": "next start -p 3000",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@azure/storage-file-datalake": "^12.16.0",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@fontsource/roboto": "^5.0.13",
+    "@mui/icons-material": "^5.16.5",
+    "@mui/material": "^5.16.5",
+    "@prisma/client": "^5.15.0",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@tanstack/react-table": "^8.14.0",
+    "bootstrap": "^5.3.3",
+    "file-saver": "^2.0.5",
+    "next": "14.1.0",
+    "next-auth": "^4.24.6",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.0.1",
+    "sass": "^1.71.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/file-saver": "^2.0.7",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/uuid": "^9.0.8",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "prisma": "^5.15.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  }
+}
