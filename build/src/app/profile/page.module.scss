@@ -1,0 +1,99 @@
+.marginRight40 {
+    margin-right: 40px;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
+    min-height: 50vh;
+
+    .profileGroup {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        flex: 3;
+        padding: 2rem;
+        background: #ffffff;
+        border-radius: .35rem;
+        box-shadow: 0 1px 5px #00000030;
+
+        .profileHeaderGroup {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+
+            .profileHeaderLeft {
+                flex-grow: 2;
+            }
+
+            .profileHeaderRight {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: start;
+
+                button {
+                    background-color: transparent;
+                    border: none;
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 4px;
+
+                    span {
+                        align-self: center;
+                        height: 1.1rem;
+                        margin: 0 0 0 4px;
+                    }
+                }
+            }
+        }
+
+        .profileContentGroup {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin: 40px 0 20px 0;
+
+            .profileContentTitle {
+                font-weight: bold;
+            }
+
+            .profileContentWrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin: 10px 0 6px 0;
+
+                .profileContentCell {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    min-width: 300px;
+
+                    .profileContentCellIconGroup {
+                        cursor: pointer;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                    }
+
+                    .profileContentCellTitle {
+                        margin: 0 6px 0 0;
+                        text-decoration: underline;
+                    }
+                    
+                }
+            }
+        }
+    }
+}

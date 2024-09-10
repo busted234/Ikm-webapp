@@ -1,0 +1,85 @@
+.fileSelectWrapper {
+  display: flex;
+  gap: 1rem;
+
+  select {
+    flex: 1;
+  }
+
+  button {
+    flex: none;
+
+    > svg {
+      margin-right: .25rem;
+    }
+  }
+}
+
+.file {
+  position: relative;
+  margin-bottom: .5rem;
+  padding: .5rem;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+
+  .name {
+    margin-right: 1.5rem;
+    margin-bottom: .25em;
+  }
+
+  .trash {
+    position: absolute;
+    top: .75rem;
+    right: .5rem;
+    cursor: pointer;
+  }
+
+  .piiLabel {
+    font-size: .8em;
+  }
+}
+
+.popoverGroup {
+  .popoverTitle {
+    font-weight: bold;
+    margin: 0 0 20px 0;
+  }
+  .popoverSubtitle {
+    text-decoration: underline;
+  }
+}
+
+.labelGroup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .popoverIconContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  
+    .popoverIcon {
+      margin: 0 4px 0 0;
+    }
+  }
+}
+
+.requestActions {
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .rightAlign {
+      margin: 0 6px 0 0;
+    }
+    .uploadIcon {
+      font-size: 0.9rem;
+    }
+    .accessIcon {
+      font-size: 1.1rem;
+    }
+  }
+}

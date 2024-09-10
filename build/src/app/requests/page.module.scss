@@ -1,0 +1,191 @@
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem;
+  min-height: 50vh;
+}
+
+.filesPane {
+  position: relative;
+  flex: 3;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: .35rem;
+  box-shadow: 0 1px 5px #00000030;
+
+  .heading {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .loading {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #555555;
+
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+.requestsMenu {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  li {
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  .active {
+    border-bottom: 3px solid #002060;
+  }
+
+  .disabled {
+    cursor: default;
+    opacity: .5;
+  }
+}
+
+// TODO: Consolidate common table styles
+.fileTable {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: .95rem;
+
+  tr {
+    cursor: pointer;
+
+    &.selected td {
+      background: #1f4e79;
+      color: #ffffff;
+    }
+  }
+
+  th, td {
+    padding: .25rem .5rem;
+  }
+
+  th {
+    font-weight: normal;
+    text-align: left;
+    white-space: nowrap;
+    padding-bottom: .5em;
+
+    // TODO: Update these when columns are finalized
+    &:nth-child(1) {
+      width: 110px;
+    }
+    &:nth-child(5) {
+      width: 100px;
+    }
+    &:nth-child(6) {
+      width: 90px;
+    }
+  }
+
+  td {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .status {
+    text-transform: capitalize;
+  }
+
+  .approved {
+    color: #009900;
+  }
+
+  .rejected {
+    color: #cc0000;
+  }
+}
+
+.rightCol {
+  flex: 1;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: .35rem;
+  box-shadow: 0 1px 5px #00000030;
+  font-size: .8rem;
+
+  p {
+    margin: 0;
+  }
+
+  & > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    & > * {
+      flex: none;
+    }
+  }
+
+  .fileName {
+    font-weight: bold;
+  }
+
+  .piiNotice {
+    margin-top: -1.5rem;
+    color: #770000;
+
+    svg {
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  .downloadBtn {
+    margin-left: 1em;
+    padding: .25em;
+    background: none;
+    border: none;
+  }
+
+  .actions {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    & > button {
+      min-width: 40%;
+      cursor: pointer;
+    }
+  }
+
+  .justification,
+  .notes {
+    & > div:first-child {
+      margin-bottom: .5rem;
+    }
+  }
+
+  .notes textarea {
+    width: 100%;
+    padding: .25em .5em;
+  }
+  
+}
